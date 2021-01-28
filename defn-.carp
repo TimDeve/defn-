@@ -1,0 +1,5 @@
+(defmacro defn- [name args form]
+  (do
+   (eval `(private %name))
+   (eval `(hidden %name))
+   (eval `(defn %name %args %form))))
